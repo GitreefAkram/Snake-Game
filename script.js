@@ -2,7 +2,7 @@ let inputDir = {x: 0,y: 0};
 let foodSound = new Audio('./Files/eat.wav');
 let gameOverSound = new Audio('./Files/gameover.mp3');
 let moveSound = new Audio('./Files/move.mp3');
-let speed = 4;
+let speed = 6;
 let Score = 0;
 let lastPaintTime = 0;
 let snakeArr = [
@@ -47,11 +47,12 @@ function gameEngine()
     //If snake collides with wall or itself
     if (isCollide(snakeArr)) 
     {
-          
+        Score = 0;  
+        scoreBox.innerHTML = "Score : " + Score;
         inputDir = {x:0 , y:0} ;
         alert("Game over , press any key to play again") ;
         snakeArr = [{x: 13, y: 15}];
-        Score = 0;
+        
     }
     //if food is eaten , score increment , food regenrate
     if (snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
