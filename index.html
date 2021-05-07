@@ -12,6 +12,32 @@
       <div id="scoreBox">Score: 0</div>
       <div id="hiscoreBox">HighScore: 0</div>
       <div id="board"></div>
+      <div class="level">
+        <h2>Select difficulty</h2>
+        <input
+          type="radio"
+          class="levellist"
+          name="levels"
+          value="easy"
+          onclick="level();"
+        />Easy
+        <br />
+        <input
+          type="radio"
+          class="levellist"
+          name="levels"
+          value="medium"
+          onclick="level();"
+        />Medium <br />
+        <input
+          type="radio"
+          class="levellist"
+          name="levels"
+          value="hard"
+          onclick="level();"
+        />Hard
+        <br />
+      </div>
     </div>
 
     <script src="./script.js"></script>

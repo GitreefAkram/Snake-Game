@@ -2,9 +2,34 @@ let inputDir = {x: 0,y: 0};
 let foodSound = new Audio('./Files/eat.wav');
 let gameOverSound = new Audio('./Files/gameover.mp3');
 let moveSound = new Audio('./Files/move.mp3');
-let speed = 6;
+let speed = 5;
 let Score = 0;
 let lastPaintTime = 0;
+
+function level()
+{
+    var type = document.getElementsByName("levels");
+    if (type[0].checked) 
+    {
+        speed = 4;
+        console.log("Easy")        
+    }
+    else if (type[1].checked) 
+    {
+        speed = 8;
+        console.log("medium");    
+    }
+    else if(type[2].checked)
+    {
+        speed = 16;
+        console.log("hard");
+    }
+
+}
+
+// $('.levellist').on('change', function(){
+//     $('.levellist').not(this).prop('checked', false);
+// });
 let snakeArr = [
 
     {x: 13, y: 15}
